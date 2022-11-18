@@ -4,7 +4,7 @@ const express = require('express')
 const router = express.Router();
 const dbo = require('../dbConn.ts');
 
-router.route('/heroStatus').get(async function (_req, res) {
+router.route('/heroStatus').get(async function (_req, callback) {
     const dbConnect = dbo.getDb();
   
     dbConnect
@@ -13,9 +13,9 @@ router.route('/heroStatus').get(async function (_req, res) {
       // .limit(50)
       .toArray(function (err, result) {
         if (err) {
-          res.status(400).send('Error fetching listings!');
+          callback.status(400).send('Error fetching listings!');
         } else {
-          res.json(result);
+          callback.json(result);
         }
       });
   });

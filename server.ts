@@ -16,9 +16,9 @@ app.use(cors());
 app.use(express.json());
 app.use(require('./routes/hero_status.ts'));
 
-app.use(function (err, _req, res) {
+app.use(function (err, _req, callback) {
     console.error(err.stack);
-    res.status(500).send('Something broke!');
+    callback.status(500).send('Something broke!');
   });
 
   dbo.connectToServer(function (err) {
