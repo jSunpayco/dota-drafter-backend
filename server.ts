@@ -21,14 +21,18 @@ app.use(function (err, res, _req, next) {
     res.status(500).send('Something broke!');
   });
 
-  dbo.connectToServer(function (err) {
-    if (err) {
-      console.error(err);
-      process.exit();
-    }
-    app.listen(port, () => {
-      console.log(`Server is running on port: ${port}`);
-    });
+dbo.connectToServer(function (err) {
+  if (err) {
+    console.error(err);
+    process.exit();
+  }
+  app.listen(port, () => {
+    console.log(`Server is running on port: ${port}`);
   });
+});
+
+app.get("/heroStatus", function (req, res) {
+  res.render("heroStatus");
+});
 
 // https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial
