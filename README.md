@@ -1,5 +1,7 @@
 # DOTA Drafter
 
+Note*: This is currently a work in progress
+
 This is the backend component for the DOTA Drafter application in this [repo](https://github.com/jSunpayco/dota_drafter)
 
 This is written using NodeJS, ExpressJS, and the data is gathered from Mongo Atlas.
