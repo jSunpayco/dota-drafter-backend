@@ -3,7 +3,7 @@ const express = require('express')
 const cors = require('cors')
 const port = process.env.PORT || 5000;
 
-const dbo = require('./dbConn');
+const dbo = require('./dbConn.ts');
 
 const connectionString = process.env.mongoURI;
 const client = new MongoClient(connectionString, {
@@ -16,12 +16,12 @@ app.use(cors());
 app.use(express.json());
 app.use(require('./routes/hero_status.ts'));
 
-app.use(function (err:any, _req:any, res:any) {
+app.use(function (err, _req, res) {
     console.error(err.stack);
     res.status(500).send('Something broke!');
   });
 
-  dbo.connectToServer(function (err:any) {
+  dbo.connectToServer(function (err) {
     if (err) {
       console.error(err);
       process.exit();

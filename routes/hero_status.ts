@@ -1,16 +1,17 @@
 const {Router} = require('express')
-import express from "express";
+// import express from "express";
+const express = require('express')
 const router = express.Router();
-const dbo = require('../dbConn');
+const dbo = require('../dbConn.ts');
 
-router.route('/heroStatus').get(async function (_req:any, res:any) {
+router.route('/heroStatus').get(async function (_req, res) {
     const dbConnect = dbo.getDb();
   
     dbConnect
       .collection('heroes')
       .find({})
       // .limit(50)
-      .toArray(function (err:any, result:any) {
+      .toArray(function (err, result) {
         if (err) {
           res.status(400).send('Error fetching listings!');
         } else {

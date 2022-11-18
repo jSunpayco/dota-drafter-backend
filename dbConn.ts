@@ -5,11 +5,11 @@ const myClient = new MongoClient(myConnectionString, {
   useUnifiedTopology: true,
 });
 
-let myConn:any;
+let myConn;
 
 module.exports = {
-  connectToServer: function (callback:any) {
-    myClient.connect(function (err:any, db:any) {
+  connectToServer: function (callback) {
+    myClient.connect(function (err, db) {
       if (err || !db) {
         return callback(err);
       }
@@ -25,5 +25,3 @@ module.exports = {
     return myConn;
   },
 };
-
-export {};
