@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/server.ts",
-    "server": "nodemon backend/server.ts --ignore client"
+    "start": "node server.ts",
+    "server": "nodemon server.ts --ignore client"
   },
   "keywords": [],
   "author": "",
