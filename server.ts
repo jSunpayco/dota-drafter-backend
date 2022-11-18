@@ -32,7 +32,7 @@ dbo.connectToServer(function (err) {
 });
 
 app.get("/heroStatus", function (req, res) {
-  res.render("heroStatus");
+  res.render("./routes/hero_status.ts");
 });
 
 // https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial
