@@ -14,7 +14,7 @@ Go to the main directory of the project and open command line to enter the follo
 
 ```sh
 npm install
-npm run server
+npm start
 ```
 
 To stop the application from running, you may enter ctrl+c on the command line. (cmd+c for Mac).
@@ -25,7 +25,7 @@ To stop the application from running, you may enter ctrl+c on the command line. 
 
 Installs the required packages and dependencies
 
-### `npm run server`
+### `npm start`
 
 Runs the server.ts file.\
 This must be run alongside the front end component.
