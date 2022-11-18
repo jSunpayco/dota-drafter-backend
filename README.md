@@ -17,7 +17,7 @@ npm run server
 
 To stop the application from running, you may enter ctrl+c on the command line. (cmd+c for Mac).
 
-### `Description of commands:`
+## Description of commands:
 
 ### `npm install`
 
