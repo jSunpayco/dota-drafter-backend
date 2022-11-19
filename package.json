@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.ts",
     "server": "nodemon server.ts --ignore client",
-    "build": "webpack --config webpack.config.js"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
