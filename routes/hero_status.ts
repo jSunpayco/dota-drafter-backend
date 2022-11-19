@@ -2,7 +2,7 @@ const {Router} = require('express')
 // import express from "express";
 const express = require('express')
 const router = express.Router();
-const dbo = require('../dbConn');
+const dbo = require('../dbConn.ts');
 
 router.route('/heroStatus').get(async function (err, res, _req, next) {
     const dbConnect = dbo.getDb();

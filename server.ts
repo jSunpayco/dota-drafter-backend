@@ -3,7 +3,7 @@ const express = require('express')
 const cors = require('cors')
 const port = process.env.PORT || 5000;
 
-const dbo = require('./dbConn');
+const dbo = require('./dbConn.ts');
 
 const connectionString = process.env.mongoURI;
 const client = new MongoClient(connectionString, {
@@ -14,7 +14,7 @@ const client = new MongoClient(connectionString, {
 const app = express()
 app.use(cors());
 app.use(express.json());
-app.use(require('./routes/hero_status'));
+app.use(require('./routes/hero_status.ts'));
 
 app.use(function (err, res, _req, next) {
     console.error(err.stack);
@@ -36,7 +36,7 @@ app.get('/', function(req, res) {
 });
 
 app.get("/heroStatus", function (req, res) {
-  res.render("./routes/hero_status");
+  res.render("./routes/hero_status.ts");
 });
 
 // https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial
