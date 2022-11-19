@@ -31,6 +31,10 @@ dbo.connectToServer(function (err) {
   });
 });
 
+app.get('/', function(req, res) {
+  res.send('Connected');
+});
+
 app.get("/heroStatus", function (req, res) {
   res.render("./routes/hero_status.ts");
 });
