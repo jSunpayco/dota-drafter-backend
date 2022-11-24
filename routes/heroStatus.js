@@ -9,6 +9,7 @@ recordRoutes.route('/heroStatus').get(async function (_req, res) {
   dbConnect
     .collection('heroes')
     .find({})
+    .sort({localized_name:1})
     // .limit(50)
     .toArray(function (err, result) {
       if (err) {
