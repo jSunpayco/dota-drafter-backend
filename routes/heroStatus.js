@@ -5,10 +5,10 @@ const dbo = require('../conn');
 
 recordRoutes.route('/heroStatus').get(async function (_req, res) {
   const dbConnect = dbo.getDb();
-
+  
   dbConnect
     .collection('heroes')
-    .find({})
+    .find(_req.query.filters)
     .sort({localized_name:1})
     // .limit(50)
     .toArray(function (err, result) {

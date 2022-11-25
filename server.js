@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(require('./routes/heroStatus'));
 
-app.use(function (err, _req, res) {
+app.use(function (err, req, res, next) {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
