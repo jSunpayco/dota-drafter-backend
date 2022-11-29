@@ -2,10 +2,9 @@
   "name": "drafter-backend",
   "version": "1.0.0",
   "description": "The backend component of the DOTA Drafter App",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "build": "node ./build.js"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "MIT",
