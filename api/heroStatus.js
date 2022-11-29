@@ -3,7 +3,7 @@ const recordRoutes = express.Router();
 
 const dbo = require('../conn');
 
-recordRoutes.route('/heroStatus').get(async function (_req, res) {
+recordRoutes.route('/api/heroStatus').get(async function (_req, res) {
   const dbConnect = dbo.getDb();
   
   dbConnect
