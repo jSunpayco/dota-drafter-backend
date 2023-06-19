@@ -2,9 +2,11 @@
 
 This is the backend component for the DOTA Drafter application in this [repo](https://github.com/jSunpayco/dota_drafter)
 
-This is written using NodeJS, ExpressJS, and the data is gathered from Mongo Atlas. Additionally, it has been deployed to Vercel.
+This is written using NodeJS, ExpressJS, and the data is gathered from Mongo Atlas.
 
-## Running the app locally
+Note: This project is no longer deployed on Vercel, and is now required to be run locally.
+
+## Running the app
 
 Go to the main directory of the project and open command line to enter the following commands to run the backend:
 
